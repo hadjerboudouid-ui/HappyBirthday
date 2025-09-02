@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy birthday!</title>
+    <style>
+      .pic1 {
+        display: block;
+      }
+      .pic2,
+      .pic3,
+      .pic4,
+      .pic5 {
+        display: none;
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="pic1" onclick="biggerHeart(1)" src="1.png" />
+    <img class="pic2" onclick="biggerHeart(2)" src="2.png" />
+    <img class="pic3" onclick="biggerHeart(3)" src="3.png" />
+    <img class="pic4" onclick="biggerHeart(4)" src="4.png" />
+    <img class="pic5" onclick="biggerHeart(4)" src="5.png" />
+  </body>
+  <script>
+    function biggerHeart(num) {
+      Number(num);
+      document.querySelector(`.pic${num}`).style.display = "none";
+      num++;
+      document.querySelector(`.pic${num}`).style.display = "block";
+    }
+  </script>
+</html>
